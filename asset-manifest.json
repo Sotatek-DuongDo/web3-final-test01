@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/final-test01/static/css/main.07270af3.chunk.css",
+    "main.js": "/final-test01/static/js/main.e33eab7f.chunk.js",
+    "main.js.map": "/final-test01/static/js/main.e33eab7f.chunk.js.map",
+    "runtime-main.js": "/final-test01/static/js/runtime-main.22e40ea4.js",
+    "runtime-main.js.map": "/final-test01/static/js/runtime-main.22e40ea4.js.map",
+    "static/js/2.29ba95a8.chunk.js": "/final-test01/static/js/2.29ba95a8.chunk.js",
+    "static/js/2.29ba95a8.chunk.js.map": "/final-test01/static/js/2.29ba95a8.chunk.js.map",
+    "static/js/3.8e777612.chunk.js": "/final-test01/static/js/3.8e777612.chunk.js",
+    "static/js/3.8e777612.chunk.js.map": "/final-test01/static/js/3.8e777612.chunk.js.map",
+    "static/js/4.56d9ffac.chunk.js": "/final-test01/static/js/4.56d9ffac.chunk.js",
+    "static/js/4.56d9ffac.chunk.js.map": "/final-test01/static/js/4.56d9ffac.chunk.js.map",
+    "index.html": "/final-test01/index.html",
+    "static/css/main.07270af3.chunk.css.map": "/final-test01/static/css/main.07270af3.chunk.css.map",
+    "static/js/2.29ba95a8.chunk.js.LICENSE.txt": "/final-test01/static/js/2.29ba95a8.chunk.js.LICENSE.txt",
+    "static/js/3.8e777612.chunk.js.LICENSE.txt": "/final-test01/static/js/3.8e777612.chunk.js.LICENSE.txt",
+    "static/media/metamask.4368e45a.svg": "/final-test01/static/media/metamask.4368e45a.svg",
+    "static/media/walletconnect.dfa25e47.svg": "/final-test01/static/media/walletconnect.dfa25e47.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22e40ea4.js",
+    "static/js/2.29ba95a8.chunk.js",
+    "static/css/main.07270af3.chunk.css",
+    "static/js/main.e33eab7f.chunk.js"
+  ]
+}
