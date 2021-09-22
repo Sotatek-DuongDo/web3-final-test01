@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/web3-final-test01/static/css/main.07270af3.chunk.css",
-    "main.js": "/web3-final-test01/static/js/main.e33eab7f.chunk.js",
-    "main.js.map": "/web3-final-test01/static/js/main.e33eab7f.chunk.js.map",
-    "runtime-main.js": "/web3-final-test01/static/js/runtime-main.fe5a48c5.js",
-    "runtime-main.js.map": "/web3-final-test01/static/js/runtime-main.fe5a48c5.js.map",
-    "static/js/2.bae0b293.chunk.js": "/web3-final-test01/static/js/2.bae0b293.chunk.js",
-    "static/js/2.bae0b293.chunk.js.map": "/web3-final-test01/static/js/2.bae0b293.chunk.js.map",
-    "static/js/3.8e777612.chunk.js": "/web3-final-test01/static/js/3.8e777612.chunk.js",
-    "static/js/3.8e777612.chunk.js.map": "/web3-final-test01/static/js/3.8e777612.chunk.js.map",
-    "static/js/4.56d9ffac.chunk.js": "/web3-final-test01/static/js/4.56d9ffac.chunk.js",
-    "static/js/4.56d9ffac.chunk.js.map": "/web3-final-test01/static/js/4.56d9ffac.chunk.js.map",
+    "main.js": "/web3-final-test01/static/js/main.3c165d59.chunk.js",
+    "main.js.map": "/web3-final-test01/static/js/main.3c165d59.chunk.js.map",
+    "runtime-main.js": "/web3-final-test01/static/js/runtime-main.958d7ccb.js",
+    "runtime-main.js.map": "/web3-final-test01/static/js/runtime-main.958d7ccb.js.map",
+    "static/js/2.15bb19cf.chunk.js": "/web3-final-test01/static/js/2.15bb19cf.chunk.js",
+    "static/js/2.15bb19cf.chunk.js.map": "/web3-final-test01/static/js/2.15bb19cf.chunk.js.map",
+    "static/js/3.4fce3a75.chunk.js": "/web3-final-test01/static/js/3.4fce3a75.chunk.js",
+    "static/js/3.4fce3a75.chunk.js.map": "/web3-final-test01/static/js/3.4fce3a75.chunk.js.map",
+    "static/js/4.a5655f1e.chunk.js": "/web3-final-test01/static/js/4.a5655f1e.chunk.js",
+    "static/js/4.a5655f1e.chunk.js.map": "/web3-final-test01/static/js/4.a5655f1e.chunk.js.map",
     "index.html": "/web3-final-test01/index.html",
     "static/css/main.07270af3.chunk.css.map": "/web3-final-test01/static/css/main.07270af3.chunk.css.map",
-    "static/js/2.bae0b293.chunk.js.LICENSE.txt": "/web3-final-test01/static/js/2.bae0b293.chunk.js.LICENSE.txt",
-    "static/js/3.8e777612.chunk.js.LICENSE.txt": "/web3-final-test01/static/js/3.8e777612.chunk.js.LICENSE.txt",
+    "static/js/2.15bb19cf.chunk.js.LICENSE.txt": "/web3-final-test01/static/js/2.15bb19cf.chunk.js.LICENSE.txt",
+    "static/js/3.4fce3a75.chunk.js.LICENSE.txt": "/web3-final-test01/static/js/3.4fce3a75.chunk.js.LICENSE.txt",
     "static/media/metamask.4368e45a.svg": "/web3-final-test01/static/media/metamask.4368e45a.svg",
     "static/media/walletconnect.dfa25e47.svg": "/web3-final-test01/static/media/walletconnect.dfa25e47.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fe5a48c5.js",
-    "static/js/2.bae0b293.chunk.js",
+    "static/js/runtime-main.958d7ccb.js",
+    "static/js/2.15bb19cf.chunk.js",
     "static/css/main.07270af3.chunk.css",
-    "static/js/main.e33eab7f.chunk.js"
+    "static/js/main.3c165d59.chunk.js"
   ]
 }
