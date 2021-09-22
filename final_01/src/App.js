@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useWeb3React } from "@web3-react/core";
-import { formatEther } from "@ethersproject/units";
+import { formatEther, formatUnits } from "@ethersproject/units";
 import Modal from 'react-modal';
 import Web3 from 'web3';
 import { trackPromise } from 'react-promise-tracker';
@@ -138,11 +138,13 @@ function App() {
       return;
     }
     const masterChefSC = new web3Instance.current.eth.Contract(Masterchef_ABI, Masterchef_ADDRESS);
+    const amout = Web3.utils.toWei(dataModal.value, 'ether');
 
     // stake
     if (dataModal.title === 'stake') {
       try {
-        await trackPromise(masterChefSC.methods.deposit(dataModal.value).send({ from: account }));
+        await trackPromise(masterChefSC.methods.deposit(amout).send({ from: account }))
+        await trackPromise(getVestingInfos());
       } catch (error) {
         console.log(error);
       }
@@ -152,19 +154,18 @@ function App() {
     // withdraw
     if (dataModal.title === 'withdraw') {
       try {
-        await trackPromise(masterChefSC.methods.withdraw(Number(dataModal.value)).send({ from: account }));
+        await trackPromise(masterChefSC.methods.withdraw(amout).send({ from: account }));
+        await trackPromise(getVestingInfos());
       } catch (error) {
         console.log(error);
       }
     }
-
-    await trackPromise(getVestingInfos());
   }
 
   const handleApproval = async () => {
     try {
       const wethSmartContract = new web3Instance.current.eth.Contract(WETH_ABI, WETH_ADDRESS);
-      await trackPromise(wethSmartContract.methods.approve(Masterchef_ADDRESS, 5000 * 10 ^ 6).call());
+      await trackPromise(wethSmartContract.methods.approve(Masterchef_ADDRESS, 5000 * 10 ^ 18).call());
       setIsApproval(true);
     } catch (error) {
       console.log(error);
@@ -193,18 +194,21 @@ function App() {
 
       // get reward balance of balance
       const dd2Balance = await DD2SmartContract.methods.balanceOf(account).call();
-      setearnvalue(parseFloat(dd2Balance));
+      const decimals = await DD2SmartContract.methods.decimals().call();
+      setearnvalue(parseFloat(formatUnits(dd2Balance, decimals)).toFixed(2));
 
       // get vesting informations
       const userInfo = await masterChefSC.methods.userInfo(account).call();
-      setstakevalue(parseFloat(userInfo.amount));
+      const stakedAccount = parseFloat(Web3.utils.fromWei(userInfo.amount, 'ether')).toFixed(2);
+      setstakevalue(stakedAccount);
 
       // get WETH balance of Masterchef hold
       const balanceOf = await WETHSmartContract.methods.balanceOf(Masterchef_ADDRESS).call();
-      setstaketotal(parseFloat(Web3.utils.fromWei(balanceOf, 'ether')).toFixed(2));
+      const totalStaked = parseFloat(Web3.utils.fromWei(balanceOf, 'ether')).toFixed(2);
+      setstaketotal(totalStaked);
 
       // get percent shared of pool
-      let percent = (parseFloat(userInfo.amount) / parseFloat(balanceOf)) * 100;
+      const percent = Math.round((stakedAccount / totalStaked) * 100)
       setsharedPool(percent);
 
     } catch (error) {

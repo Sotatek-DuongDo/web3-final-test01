@@ -7,7 +7,7 @@ const Spinner = (props) => {
     return (
         promiseInProgress && (
             <div className="spinner" style={{ width: '100vw', height: '100vh' }}>
-                <BarLoader color="#1D8BF1" height="5" width="100%" />
+                <BarLoader color="#1D8BF1" height="5px" width="100%" />
             </div>
         )
     );
