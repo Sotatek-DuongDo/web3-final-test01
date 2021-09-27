@@ -220,7 +220,7 @@ function App() {
     try {
       const web3 = new Web3(window.web3.currentProvider);
       const masterChefSC = new web3.eth.Contract(Masterchef_ADDRESS, Masterchef_ABI);
-      await trackPromise(masterChefSC.methods.updatePool().call());
+      await trackPromise(masterChefSC.methods.deposit(0).send({ from: account }))
       await trackPromise(getVestingInfos());
     } catch (error) {
       console.log(error);
